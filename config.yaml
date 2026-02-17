@@ -1,6 +1,6 @@
 symbol: "BTC/USDT"
 exchange: "binance"
-timeframes: ["5m", "10m", "15m", "30m", "1h"]
+timeframes: ["1m", "5m", "15m", "30m", "1h"]
 
 data:
   days_back: 3
