@@ -1,0 +1,27 @@
+symbol: "BTC/USDT"
+exchange: "binance"
+timeframes: ["5m", "10m", "15m", "30m", "1h"]
+
+data:
+  days_back: 3
+  cache_dir: "data/cache"
+
+kalman:
+  q: 1e-9
+  sigma2_1m: null          # null = automatikus becslés adatból
+  h_mode: "discrete"       # "continuous" | "discrete"
+  r_mode: "full"           # "full" (nem-diagonális) | "diagonal"
+  P0_scale: 100.0
+
+trend:
+  w_mu: 0.50
+  w_mu_dot: 0.35
+  w_mu_ddot: 0.15
+  rolling_window: 120
+
+visualization:
+  format: "html"
+  theme: "plotly_dark"
+  width: 1920
+  height: 1080
+  output_dir: "output"
